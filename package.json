@@ -1,0 +1,24 @@
+{
+  "name": "tantrum-webdev.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init": "docsify init ./docs",
+    "serve": "docsify serve docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tantrum-webdev/tantrum-webdev.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tantrum-webdev/tantrum-webdev.github.io/issues"
+  },
+  "homepage": "https://github.com/tantrum-webdev/tantrum-webdev.github.io#readme",
+  "dependencies": {
+    "docsify-cli": "^4.4.4"
+  }
+}
