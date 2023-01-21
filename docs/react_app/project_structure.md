@@ -23,6 +23,7 @@ src
 |   |   ├── index.ts
 |   |   ├── atom.ts
 |   |   ├── selectors.ts
+├── services
 ├── test
 ├── types
 ├── utils
@@ -59,6 +60,10 @@ Routes configuration
 ### store
 
 Recoil folder. Need to check if atoms/selectors can be split by domains or not.
+
+### services
+
+Files and methods handling API calls or Storage.
 
 ### test (optional)
 
