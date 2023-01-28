@@ -1,49 +1,40 @@
 # Set of Guidelines
 
-In this page will be documented the overall guidelines and philosophy of multiple facets of the project, either some high level approach or delving into specifics.
-
 ## Work Organisation
 
-Development will be done by setting up iterations, which consist of a set of epics / stories that will be handled in one bundle before definig the next. This is similar to the common sprint, except that there is no time constraint.
+To organize development, milestones will be set. A milestone is a collection of epics and stories, grouped to complete together. Once done, we define a new milestone. This is like the usual sprint philosophy, except that we don't have time constraints.
 
 For the specifics :
 
-- An issue needs to be as descriptive as possible to avoid any back and forth during development due to lack of information / unclear specifications.
-- A story is an issue that will be handled in an epic. All issues are not necessarily stories though.
+- Make sure that issues contain enough information and what are the validation criteria
+- A story is an issue assigned to an epic. This doesn't mean that all issues are stories though.
 - An epic is a set of stories grouped by context. For example, all stories related to the card search feature(s) are in the same `Search` epic.
-- Some stories (eg: bug regression discovered while working on an unrelated epic) might be too niche to have an epic. This should not be the norm though.
-- Epics are planned in iterations. Ideally we should avoid having epics that span multiple iterations unless specifications changed.
-- Once an iteration is set, we should not add epics / stories to its content. Removing content from an iteration is doable, if tasks are blocked by something not doable in the same iteration.
-- At the end of an iteration, a meeting will be set to discuss the content of the next iteration and also to touch up on the different guidelines (the global and/or project specific)
-- All repos will have the master branch, then a branch related to an epic, then branches related to the story of an epic.
-- Pull Requests will be done from the story branch to the epic branch, once an epic is completed it will be squashed and merged to the master branch without the need for review.
-- If possible, pull requests should contain medias putting the changes in display. This can be screenshots, [looms](https://www.loom.com/) or videos, whatever seems fitting as long as the changes are presented in a clear fashion.
-
-?> CI validation could be a valid option in the future here.
-
-- All documentation should be present and up to date on this wiki.
-- Project documentation should mostly be about high level concepts, library usage and specific guidelines.
-- Project should favor, if possible, libraries/packages that are from the stack ecosystem of the project.
-
-!> This does not mean that popular and valuable libraries should be avoided at all cost. If no ecosystem dependant solution looks desirable, feel free to opt for the stack-agnostic one.
+- A milestone contains one or several epics. Avoid setting up epics that aren't closable in one milestone if possible.
+- Do not add epics / stories to a set milestone. You can remove from it if it contains blocked content though.
+- At the end of each milestone, a meeting is set up. During the meeting, three things are in order. Define the next milestone. Discuss changes to guidelines. Make sure documentation is up to date.
+- All repos will have the master branch, a branch related to a milestone, then branches related to a story.
+- Pull Requests go from a story branch to a milestone branch. Once we complete a milestone, squash and merge its branch to the master.
+- Pull Requests descriptions need to contain informations about the changes. List of modifications, screenshots, [looms](https://www.loom.com), videos, etc.
+- Opt for ecosystem specific packages if other stack agnostic proposals are similar.
 
 ## Code Organisation
 
-- Commit message should be descriptive and adhere to the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) guidelines as mush as possible.
+- Commit message should be in the form of `M<milestone number>-#<issue number>-<message>`. Example : `M1-#1-Install msw package`
 
 ?> We are not currently using any semantic versioning so it is not mandatory to have strictness over the commit message content currently. Nonetheless it would help organisation to respect a certain frame in this aspect.
 
 - Separate as mush as possible logic from display.
-- Use absolute imports, unless the import is a sibling / direct child and you are sure that both the recipient and the item imported will always be linked in such a way.
+- Use absolute imports unless importing a sibling or child if its path will stay the same.
 - Try to follow the clean code principles as mush as possible.
 - Write tests.
 
 ## Testing
 
-- Basically, do unit tests on state logic. Do integration tests on components that have interactions.
-- Test blocks should be isolated from each other. No test should depend on another running before itself.
+- Do unit test on logic. Do integration tests on components that have interactions.
+- Coverage % is not the be all end all but still provides good information about what is not covered.
+- Do tests in isolation from each other. No test should depend on another running before itself.
 
-?> End to end tests are currently not included in the scope of the project, although that might change in the future.
+?> You can check the [JavaScript Testing Best Practices](https://github.com/goldbergyoni/javascript-testing-best-practices) repository on Github to check best practices and guidelines on testing.
 
 In term of test organisation and guidelines, you take a look at the [JavaScript Testing Best Practices](https://github.com/goldbergyoni/javascript-testing-best-practices) repository on Github.
 
