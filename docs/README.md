@@ -2,16 +2,25 @@
 
 ## Big Picture
 
-The main goal is to let contributors explore tech stacks while building the same base application each time. This allows everyone to experience implementation differences between stacks on identical features and form their own opinion and preferences over stacks.
+Create many versions of the same application using a different tech stack each time. This allows contributors to compare and generate informed opinions over each stack.
 
-Having the same application base used over multiple projects doesn't imply that every application iteration will contain the exact same features. Each new stack iteration could add / remove features, emulating what could happen to a single real app product over its lifetime.
+Each iteration will provide the same base features, with room to add variations. This approach emulates the life cycle of a real product that sees its features evolve over time.
 
-The development of the application will follow defined guidelines and structures to allow organization/code consistency between repositories. Those definitions are not set in stone and will change based on feedback between iterations.
+This wiki provides global guidelines and documentation. Make sure to be aware of them when contributing. Doing so will maintain coding consistency between each project. These guidelines will also evolve over time to better fit contributors' needs.
 
 ## Application
 
-The project will consist of a deck builder for the "Magic: The Gathering" TCG. A user will be able to check a list of created/imported decks, consult/edit them and create new ones. Those decks could also be exported to a common format to be used by other applications.
+The application is a deck viewer and builder for the "Magic: The Gathering" Trading Card Game (TCG).
 
-The application will use the [Scryfall API](https://scryfall.com/docs/api) to obtain card informations. Depending on features specifications this could change or other APIs could be added.
+As a user of the application, the base user stories would allow the user to :
+
+- See the list of decks.
+- Create a new deck from scratch.
+- Import a deck from another source.
+- Look at the content of an existing deck.
+- Edit the content of an existing deck.
+- Export a deck as a text file.
+
+To get the data needed, the application will use the [magicthegathering.io API](https://docs.magicthegathering.io/).
 
 Check the [Application page](application.md) for more details.
