@@ -5,3 +5,4 @@
 - [Application](application.md)
 - React Application
 - [Project Structure](react_app/project_structure.md)
+- [AI Design Prompts](prompts.md)
